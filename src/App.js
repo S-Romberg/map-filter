@@ -10,10 +10,23 @@ class App extends Component {
     }
   }
   render() {
+    var notAGod = this.state.items.filter(creature => {
+      return creature.name.length > 4
+    })
+
+    var superheroes = notAGod.map(superhero => {
+      return (
+        <div>
+          <h1>{superhero.name}</h1>
+          <p>{superhero.superpower}</p>
+        </div>
+      )
+  })
+
     return (
       <div className="App">
         <p>Heyyyy</p>
-        <Items />
+        {superheroes}
       </div>
     );
   }
