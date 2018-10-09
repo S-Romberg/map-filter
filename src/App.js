@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Items from './components/Items'
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={    
+        items: [{name: 'Spiderman', superpower: 'Does whatever a spider can'}, {name: 'Batman', superpower: 'Being rich?'}, {name: 'Superman', superpower: 'Man of Steel'}, {name: 'Thor', superpower: 'Being a god'}]
+    }
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <p>Heyyyy</p>
+        <Items />
       </div>
     );
   }
